@@ -21,7 +21,7 @@ public class UsuarioController {
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
 
-    @PostMapping("/Usuarios")
+    @PostMapping("/usuarios")
     public ResponseEntity<?> addUsuario(@RequestBody Usuario usuario) {
         try {
             // Validar campos requeridos
@@ -52,7 +52,7 @@ public class UsuarioController {
         }
     }
 
-    @GetMapping("/Usuarios/{id}")
+    @GetMapping("/usuarios/{id}")
     public ResponseEntity<?> getUserId(@PathVariable Integer id) {
         try {
             Optional<Usuario> usuario = usuarioRepository.findById(id);
